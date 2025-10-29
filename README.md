@@ -39,7 +39,7 @@ $$
 ### Boundary Conditions
 $$
 u(0,t) = 0, \qquad
--\,k\,u_x(1,t) =  lpha\,(u(1,t)^4 - u_*^4) + g.
+-\,k\,u_x(1,t) =  \alpha\,(u(1,t)^4 - u_*^4) + g.
 $$
 
 ### Initial Condition (for transient cases)
