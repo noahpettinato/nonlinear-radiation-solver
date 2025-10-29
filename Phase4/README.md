@@ -36,13 +36,16 @@ Here \(c\) is the heat capacity, \(k\) the conductivity, \( lpha\) the radiation
 ---
 
 ## Numerical Methods
-- **Time Discretization:** Fully implicit Backward Euler.  
+
+- **Time Discretization:** Fully implicit Backward Euler.
 - **Spatial Discretizations:**
-  - FD (one-sided) — first-order boundary enforcement.  
-  - CCFD (ghost point) — second-order boundary enforcement.  
-- **Nonlinearity Handling:** Newton’s method with analytic Jacobian from `f_and_J_phase4_fd.m` or `f_and_J_phase4_ccfd.m`.  
-- **Convergence Tolerance:** \( \|F(U)\|_2 < 10^{-8} \).  
-- **Initial Condition:** \( u(x,0) = \sin(\pi x) \).
+  - FD (one-sided) — first-order boundary enforcement.
+  - CCFD (ghost point) — second-order boundary enforcement.
+- **Nonlinearity Handling:** Newton’s method with analytic Jacobian from `f_and_J_phase4_fd.m` or `f_and_J_phase4_ccfd.m`.
+- **Convergence Tolerance:**  
+  $$ \|F(U)\|_2 < 10^{-8}. $$
+- **Initial Condition:**  
+  $$ u(x,0) = \sin(\pi x). $$
 
 ---
 
