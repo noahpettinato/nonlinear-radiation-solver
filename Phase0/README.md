@@ -8,11 +8,24 @@ The results provide a controlled, linear benchmark before introducing nonlinear 
 ---
 
 ## Governing Equation
-- u''(x) = f(x), \quad x \in (0,1)
-with Robin boundary conditions
-u'(0) + \alpha_0 u(0) = g_0, \quad -u'(1) = \alpha_1 u(1) + g_1.
 
-Exact solution: \( u(x) = e^{2x} \)
+$$
+-\,u''(x) = f(x), \quad x \in (0,1)
+$$
+
+with Robin boundary conditions
+
+$$
+u'(0) + \alpha_0 u(0) = g_0, 
+\quad 
+-\,u'(1) = \alpha_1 u(1) + g_1.
+$$
+
+Exact solution:
+
+$$
+u(x) = e^{2x}.
+$$
 
 ---
 
