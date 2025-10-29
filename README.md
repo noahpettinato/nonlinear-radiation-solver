@@ -16,14 +16,15 @@ Time integration uses the Backward Euler method.
 Nonlinear terms are handled with Newton’s method using analytic Jacobians and optional damping.
 
 ## Project Structure
+```
 Project/
-│
 ├── README.md
-├── Phase0/   (Linear steady-state Robin problem)
-├── Phase1/   (Pollock benchmark for Newton’s method)
-├── Phase2/   (Nonlinear steady-state Robin problem)
-├── Phase3/   (Time-lagged nonlinear Robin BC)
-└── Phase4/   (Fully implicit nonlinear radiation problem)
+├── Phase0/   # Linear steady-state Robin problem
+├── Phase1/   # Pollock benchmark for Newton’s method
+├── Phase2/   # Nonlinear steady-state Robin problem
+├── Phase3/   # Time-lagged nonlinear Robin BC
+└── Phase4/   # Fully implicit nonlinear radiation problem
+```
 
 Each phase folder contains its own MATLAB scripts, analytic Jacobian builders, and driver routines.  
 See individual README_Phase*.md files for phase-specific details.
@@ -87,17 +88,27 @@ $$
 ## How to Run
 
 In MATLAB:
+```matlab
+% Phase 0 – Linear Robin test
+robin
 
->> robin
->> convergence_plot
->> compare_convergence_epsilons
->> animate_convergence_epsilons
->> robin_phase2
->> robin_phase2_convergence
->> robin_phase3
->> phase4_fd
->> phase4_ccfd
->> phase4_compare
+% Phase 1 – Pollock benchmark
+convergence_plot
+compare_convergence_epsilons
+animate_convergence_epsilons
+
+% Phase 2 – Nonlinear steady-state
+robin_phase2
+robin_phase2_convergence
+
+% Phase 3 – Time-lagged radiation BC
+robin_phase3
+
+% Phase 4 – Fully implicit nonlinear PDE
+phase4_fd
+phase4_ccfd
+phase4_compare
+```
 
 Each script prints diagnostics and generates figures in the MATLAB workspace.
 
@@ -111,5 +122,5 @@ Each script prints diagnostics and generates figures in the MATLAB workspace.
 This capsule provides a complete solver pipeline for 1D heat equations with nonlinear radiation effects.  
 Each phase builds conceptually and computationally upon the previous one, culminating in a validated, modular MATLAB framework for nonlinear parabolic PDEs with complex boundary physics.
 
-Version: 1.0  Date: August 2025  
-Institution: Oregon State University  
+Version: 1.0    Date: August 2025  
+Institution: Oregon State University
