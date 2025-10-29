@@ -113,10 +113,13 @@ phase4_compare
 Each script prints diagnostics and generates figures in the MATLAB workspace.
 
 ## References
-1. Sara Pollock and Hunter Schwartz, Benchmarking Results for the Newton–Anderson Method, Results in Applied Mathematics, 8 (2020).  
-2. M. Peszynska, Modeling Nonlinear Radiation Boundary Conditions in Heat Conduction Problems, OSU Lecture Notes (2025).  
-3. R. J. LeVeque, Finite Difference Methods for ODEs and PDEs, SIAM (2007).  
-4. C. T. Kelley, Solving Nonlinear Equations with Newton’s Method, SIAM (2003).
+1. Sara Pollock and Hunter Schwartz. *Benchmarking Results for the Newton–Anderson Method.* Results in Applied Mathematics, 8 (2020): 100095.  
+2. Malgorzata Peszynska. *Modeling Nonlinear Radiation Boundary Conditions in Heat Conduction Problems.* Lecture Notes and Project Instructions, Oregon State University, 2025.  
+3. Randall J. LeVeque. *Finite Difference Methods for Ordinary and Partial Differential Equations: Steady-State and Time-Dependent Problems.* SIAM, 2007.  
+4. C. T. Kelley. *Solving Nonlinear Equations with Newton’s Method.* SIAM, 2003.  
+5. J. David Logan. *Applied Mathematics.* 3rd Edition, Wiley, 2006.  
+6. MATLAB Documentation. MathWorks, 2025. https://www.mathworks.com/help/  
+7. Notes from MTH 452 and MTH 453 (Numerical ODEs and PDEs). Oregon State University, 2024–2025.
 
 ## Conclusion
 This capsule provides a complete solver pipeline for 1D heat equations with nonlinear radiation effects.  
