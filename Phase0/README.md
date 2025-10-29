@@ -1,27 +1,49 @@
-# Phase 0 – Linear Steady-State Problem with Robin Boundary Condition
+# Phase 0 — Linear Steady-State Problem with Robin Boundary Conditions
 
-This phase establishes a baseline accuracy comparison for the steady-state linear problem
+## Objective
+Establish and verify the numerical accuracy of first-order (D₋) and second-order (D₀) finite difference schemes for the 1D steady-state heat equation with linear Robin boundary conditions.
 
-- k u_{xx} = 0, \quad u(0) = 0, \quad -k u_x(1) = \alpha (u(1) - u_*).
+The results provide a controlled, linear benchmark before introducing nonlinear radiation effects in later phases.
 
-Two spatial discretizations are implemented:
-1. **FD (Finite Difference)** – backward one-sided derivative at \(x=1\)
-2. **CCFD (Centered Control Finite Difference)** – ghost-point formulation for second-order accuracy
+---
 
-### Key Features
-- Linear test problem used to verify implementation of boundary treatment.
-- Confirms second-order accuracy of the CCFD method.
-- Serves as the foundation for later nonlinear extensions.
+## Governing Equation
+\[
+- u''(x) = f(x), \quad x \in (0,1)
+\]
+with Robin boundary conditions
+\[
+u'(0) + \alpha_0 u(0) = g_0, \quad -u'(1) = \alpha_1 u(1) + g_1.
+\]
 
-### Key Files
-- `robin_fd.m` – one-sided (FD) method
-- `robin_ccfd.m` – ghost-point (CCFD) method
+Exact solution: \( u(x) = e^{2x} \)
 
-### Outputs
-- Printed infinity-norm error between FD and CCFD
-- Plot of \(u(x)\) for both methods
+---
 
-### Usage
+## Files Included
+| File | Description |
+|------|--------------|
+| **`robin.m`** | Main script. Implements both D₋ (one-sided) and D₀ (ghost-point) finite difference schemes, computes errors, and plots convergence rates. |
+
+---
+
+## Numerical Methods
+- **D₋ (One-sided):** First-order scheme using forward/backward differences at the boundaries.  
+- **D₀ (Centered + Ghost Point):** Second-order scheme enforcing Robin BCs via ghost-point elimination.  
+- **Error Metrics:** Infinity norm and discrete L² norm.  
+- **Convergence Verification:** Expected rates of O(h) for D₋ and O(h²) for D₀.
+
+---
+
+## Expected Outputs
+- Console table of error norms and convergence rates.  
+- Two log–log plots:
+  - ∞-norm error vs. grid size \( h \)
+  - L²-norm error vs. grid size \( h \)
+
+---
+
+## How to Run
+In MATLAB:
 ```matlab
->> robin_fd
->> robin_ccfd
+>> robin
