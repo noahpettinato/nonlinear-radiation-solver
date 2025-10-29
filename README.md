@@ -15,9 +15,9 @@ Spatial discretization is performed with:
 Time integration uses the Backward Euler method.  
 Nonlinear terms are handled with Newton’s method using analytic Jacobians and optional damping.
 
-## Project Structure
+## Repository Structure
 ```
-Project/
+nonlinear-radiation-solver/
 ├── README.md
 ├── Phase0/   # Linear steady-state Robin problem
 ├── Phase1/   # Pollock benchmark for Newton’s method
@@ -27,9 +27,10 @@ Project/
 ```
 
 Each phase folder contains its own MATLAB scripts, analytic Jacobian builders, and driver routines.  
-See individual README_Phase*.md files for phase-specific details.
+See individual phase-level README.md files for details.
 
 ## Full Research Capsule
+
 For the complete derivations, figures, and solver documentation, see:
 [Noah_Pettinato_Nonlinear_Radiation_Capsule.pdf](Noah_Pettinato_Nonlinear_Radiation_Capsule.pdf)
 
