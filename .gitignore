@@ -1,0 +1,18 @@
+# MATLAB temporary and autosave files
+*.asv
+*.m~
+*.mex*
+
+# Data and results
+*.mat
+*.fig
+*.png
+*.jpg
+*.pdf~
+
+# OS / IDE files
+.DS_Store
+Thumbs.db
+
+# Editor backups
+*~
