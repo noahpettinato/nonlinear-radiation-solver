@@ -7,18 +7,21 @@ This phase explores how the convergence domains (basins of attraction) evolve as
 ---
 
 ## Governing System (Pollock’s Equation, Eq. 20)
-Let \( x = [x_1; x_2] \) and \( y = x_2 - 3 \):
-\[
+
+Let \( x = [x_1, x_2] \) and \( y = x_2 - 3 \):
+
+$$
 \begin{cases}
 f_1(x) = (x_1 - 1) + y^2, \\
 f_2(x) = \varepsilon y + \tfrac{3}{2}(x_1 - 1)y + y^2 + y^3.
 \end{cases}
-\]
-Newton’s method iterates
-\[
+$$
+
+Newton’s method iterates  
+$$
 x_{k+1} = x_k - \beta J_f(x_k)^{-1} f(x_k),
-\]
-where \( \beta \le 1 \) is a damping parameter.
+$$  
+where \( 0 < \beta \le 1 \) is a damping parameter.
 
 ---
 
