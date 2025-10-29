@@ -2,7 +2,9 @@
 
 This phase establishes a baseline accuracy comparison for the steady-state linear problem
 
+\[
 - k u_{xx} = 0, \quad u(0) = 0, \quad -k u_x(1) = \alpha (u(1) - u_*).
+\]
 
 Two spatial discretizations are implemented:
 1. **FD (Finite Difference)** – backward one-sided derivative at \(x=1\)
